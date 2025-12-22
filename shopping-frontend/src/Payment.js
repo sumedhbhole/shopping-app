@@ -20,7 +20,8 @@ const Payment = () => {
         // Fake Delay (Taaki lage asli payment ho raha hai)
         setTimeout(async () => {
             try {
-                await axios.post("http://localhost:9091/api/orders/place", {
+                    //await axios.post("http://localhost:9091/api/orders/place", 
+                    await axios.post("https://shopping-backend-n9sz.onrender.com/api/orders/place",{
                     email: user.email,
                     totalPrice: totalPrice
                 });

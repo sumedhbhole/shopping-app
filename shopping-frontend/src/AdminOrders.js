@@ -12,7 +12,8 @@ const AdminOrders = () => {
 
     const fetchOrders = async () => {
         try {
-            const response = await axios.get("http://localhost:9091/api/orders/all");
+            // const response = await axios.get("http://localhost:9091/api/orders/all");
+            const response = await axios.get("https://shopping-backend-n9sz.onrender.com/api/orders/all");
             setOrders(response.data);
         } catch (error) {
             console.error("Error fetching orders:", error);
@@ -23,7 +24,7 @@ const AdminOrders = () => {
     const handleStatusChange = async (orderId, newStatus) => {
         try {
             // Backend ko Clean Text bhejo (e.g., "SHIPPED")
-            await axios.post("http://localhost:9091/api/orders/updateStatus", {
+                await axios.post("https://shopping-backend-n9sz.onrender.com/api/orders/updateStatus", {
                 orderId: orderId,
                 status: newStatus
             });

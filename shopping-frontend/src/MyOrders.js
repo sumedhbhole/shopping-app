@@ -15,7 +15,8 @@ const MyOrders = () => {
 
     const fetchMyOrders = async (email) => {
         try {
-            const response = await axios.get(`http://localhost:9091/api/orders/user/${email}`);
+            // const response = await axios.get(`http://localhost:9091/api/orders/user/${email}`);
+            const response = await axios.get(`https://shopping-backend-n9sz.onrender.com/api/orders/user/${email}`);
             console.log("MyOrders Data:", response.data);
             setOrders(response.data || []);
         } catch (error) {
