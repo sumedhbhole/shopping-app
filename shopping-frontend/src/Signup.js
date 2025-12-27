@@ -13,8 +13,8 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            // await axios.post("http://localhost:9091/api/auth/signup", user);
-            await axios.post("https://shopping-backend-n9sz.onrender.com/api/auth/signup", user);
+            await axios.post("http://localhost:9091/api/auth/signup", user);
+           // await axios.post("https://shopping-backend-n9sz.onrender.com/api/auth/signup", user);
             alert("Account Created! Redirecting to Login...");
             navigate("/"); 
         } catch (error) {

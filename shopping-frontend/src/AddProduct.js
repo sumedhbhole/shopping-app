@@ -36,8 +36,8 @@ const AddProduct = () => {
 
         try {
             // Content-Type 'multipart/form-data' apne aap set ho jayega
-            await axios.post("https://shopping-backend-n9sz.onrender.com/api/products/add", formData);            
-            // await axios.post("http://localhost:9091/api/products/add", formData);
+           // await axios.post("https://shopping-backend-n9sz.onrender.com/api/products/add", formData);            
+             await axios.post("http://localhost:9091/api/products/add", formData);
             
             alert("Product Added Successfully with Image! 🎉");
             navigate("/dashboard");

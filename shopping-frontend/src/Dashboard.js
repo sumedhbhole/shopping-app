@@ -21,8 +21,8 @@ const Dashboard = () => {
 
     const fetchProducts = async () => {
         try {
-            // const response = await axios.get("http://localhost:9091/api/products");
-            const response = await axios.get("https://shopping-backend-n9sz.onrender.com/api/products");
+             const response = await axios.get("http://localhost:9091/api/products");
+            //const response = await axios.get("https://shopping-backend-n9sz.onrender.com/api/products");
             setProducts(response.data);
         } catch (error) {
             console.error("Error fetching products:", error);
